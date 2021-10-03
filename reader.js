@@ -5,6 +5,7 @@
         var file = document.getElementById('file');
           var list=[];
           var texts=[];
+          const newArr = [];
 file.addEventListener('change', () => {
     var txtArr = [];
     var fr = new FileReader();
@@ -17,13 +18,30 @@ file.addEventListener('change', () => {
     }
     fr.onloadend = function() {
   for (var element in txtArr){
-      list.push(txtArr[element].replace(/[a-z]/gi, '').replace(/[0-9]/g, '').replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"")
+      list.push(txtArr[element].replace(/[a-z]/gi, '').replace(/[0-9]/g, '').replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"").replace(/\s/g, '')
       )
   }
+  
+
+  for (var i = 0; i < list.length; i++) {
+  if (list[i]) {
+    
+    newArr.push(list[i]);
+
+  }
+
+}
 }
 
-read();
 
+// use for loop
+// check if element exists
+// and if it exists push to the
+// new array
+
+
+read();
+ 
     fr.readAsText(file.files[0]);
 })
 
@@ -67,7 +85,7 @@ function compare(list1,list2){
 
   function download(filename, text) {
     var element = document.createElement('a');
-    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(compare(texts,removeNumbers(list))));
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(compare(texts,removeNumbers(newArr))));
     element.setAttribute('download', filename);
     element.style.display = 'none';
     document.body.appendChild(element);

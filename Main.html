@@ -1,3 +1,4 @@
+
 <html>
     <head>
         <script src="https://unpkg.com/read-excel-file@4.x/bundle/read-excel-file.min.js"></script>
@@ -10,8 +11,10 @@
         <input type="file" id ="file">
         <table id="tbl-data"></table>
         <br> 
-        <input id="clickMe" type="button" value="Download" onclick="downloadTxt();" />
-            <textarea name="textarea" id="textarea" cols="50" rows="40"></textarea>
+
+        <div class="container">
+        <div class="flex-box">
+            
 
                    <pre class="n2">  
           ინსტრუქცია:
@@ -26,25 +29,22 @@
    
  3) დააჭირეთ Download ღილაკს 
           </pre>
+          
           <pre class="n3">     
 
-       თუ  ფანჯარაში 2-ჯერ 
+       თუ  ფანჯარაში 2-ჯერ ჩააგდეთ ფაილი     <h2 style="color:red; text-align:center">აუცილებლად დაარეფრეშეთ <br> გვერდი ! ! ! </h2>
+</pre>
+        </div>
+<textarea name="textarea" id="textarea" ></textarea>
 
-         ჩააგდეთ ფაილი                
+<input id="clickMe" type="button" value="Download" onclick="downloadTxt();" />
+ 
+</div>
 
- <pre style="color: red;font-size: 1.5vw;margin-left: 1vw;font-weight: bolder;">      აუცილებლად
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
- დაარეფრეშეთ გვერდი ! ! ! </pre>
-
-
-
-          </pre>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-
-        <script src="reader.js"></script>
-        <footer style="padding-left: 37%;margin-top: 1%;">> Made by Luka Gogiashvili -<</footer>
-        <footer style="padding-left: 39.5%;">&copy; Copyright 2021 </footer>
-
+     
+    <script src="reader.js"></script>
     </body>
 </html>
+

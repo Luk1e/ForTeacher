@@ -1,6 +1,8 @@
 
 
-
+.error{
+  display: none;
+}
 .n1{
     position:relative;
     text-align: center;
@@ -14,9 +16,7 @@
 body{
     background-image: linear-gradient(to bottom right,   #4da0b0,#d39d38  );
 }
-.error{
-    display: none;
-}
+
 
 #file {
   appearance: button;
@@ -176,17 +176,17 @@ body{
       text-align: center;
     }
     .n2{
-      font-size: 30px;
+      font-size: 20px;
     }
     .n3{
-      font-size: 30px;
+      font-size: 20px;
       margin-left: 20px;
     }
     #clickme{
       width: fit-content;
       align-self: center;
       font-size: 40px;
-      
+      height: 200px;
       margin-top: 10px;
     }
     #file{
@@ -195,6 +195,9 @@ body{
 }
 
 @media only screen and (max-width: 390px)  {
+  main{
+    display:none;
+  }
     @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Fira+Mono:wght@500&display=swap');
 .error{
     display: contents;
